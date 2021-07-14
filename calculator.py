@@ -5,13 +5,25 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 
 
 # Replace this with your code
+
+from functools import reduce 
+
 while True:
     input_string = input()
     token = input_string.split(' ')
+
+    
+
+
     if token[0] == 'q':
         break
     else:
         if token[0] == '+':
+            result = 0
+            for i in range(1, len(token)):
+                print(i)
+                result = add(result, float(token[i]))
+
             result = (add(float(token[1]), float(token[2])))
         
         elif token [0] == '-':
@@ -37,4 +49,5 @@ while True:
             
         else:
             print("Selection not valid")
+            result = 0
         print(result)
