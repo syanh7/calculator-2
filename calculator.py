@@ -19,33 +19,43 @@ while True:
         break
     else:
         if token[0] == '+':
-            result = 0
-            for i in range(1, len(token)):
-                print(i)
+            result = float(token[1])
+            for i in range(2, len(token)):
                 result = add(result, float(token[i]))
 
-            result = (add(float(token[1]), float(token[2])))
+            #result = (add(float(token[1]), float(token[2])))
         
         elif token [0] == '-':
-            result = (subtract(float(token[1]), float(token[2])))
+            result = float(token[1])
+            for i in range(2, len(token)):
+                result = subtract(result, float(token[i]))
             
+        
         elif token [0] == '*':
-            result = (multiply(float(token[1]), float(token[2])))
+            result = float(token[1])
+            for i in range(2, len(token)):
+                result = multiply(result, float(token[i]))
 
         elif token [0] == '/':
-            result = (divide(float(token[1]), float(token[2])))
+            result = float(token[1])
+            for i in range(2, len(token)):
+                result = divide(result, float(token[i]))
 
         elif token [0] == 'square':
-            result = (square(float(token[1])))
+            result = square(float(token[1]))
             
         elif token[0] == 'cube':
-            result = (cube(float(token[1])))
+            cube(float(token[1]))
 
         elif token[0] == 'pow':
-            result = (power(float(token[1]), float(token[2])))
+            result = float(token[1])
+            for i in range(2, len(token)):
+                result = pow(result, float(token[i]))
 
         elif token[0] == 'mod':
-            result = (mod(float(token[1]), float(token[2])))
+            result = float(token[1])
+            for i in range(2, len(token)):
+                result = mod(result, float(token[i]))
             
         else:
             print("Selection not valid")
